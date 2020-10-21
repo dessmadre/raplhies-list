@@ -1,5 +1,6 @@
 import Card from './Card';
 import styles from '../styles/main.module.scss';
+import { motion } from 'framer-motion';
 
 const List = ({ filteredItems }) => {
   const items = filteredItems.map((item, i) => {

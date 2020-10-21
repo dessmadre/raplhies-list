@@ -3,6 +3,7 @@ import { offerUp } from '../data/data';
 import styles from '../styles/main.module.scss';
 import List from '../comps/List';
 import SearchBox from '../comps/SearchBox';
+import Head from 'next/head';
 
 const Home = () => {
   const [items, setItems] = useState({
@@ -24,9 +25,17 @@ const Home = () => {
 
   return (
     <>
+      <Head>
+        <title>Ralphie's List</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      </Head>
       <nav className={styles.nav}>
+        <div className={styles.heading__box}>
+          <h1 className={styles.heading__1}>Ralphie's List</h1>
+        </div>
         <SearchBox handleInput={handleInput} />
       </nav>
+
       <main>
         <List filteredItems={filteredItems} />
       </main>

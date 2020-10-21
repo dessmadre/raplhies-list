@@ -1,8 +1,13 @@
 import styles from '../styles/main.module.scss';
+import { motion } from 'framer-motion';
 
 const Card = props => {
   return (
-    <div className={[styles.card].join(' ')}>
+    <motion.div
+      className={[styles.card].join(' ')}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <img className={styles.card__img} src={props.imglink} alt='' />
       <div className={styles.card__details}>
         <h3 className={styles.heading__3}>{props.title}</h3>
@@ -11,7 +16,7 @@ const Card = props => {
       <a className={styles.card__btn} href={props.link}>
         View
       </a>
-    </div>
+    </motion.div>
   );
 };
 

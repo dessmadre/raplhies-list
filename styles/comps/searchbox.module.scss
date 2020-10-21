@@ -1,5 +1,47 @@
 .nav {
-  background-color: yellowgreen;
+  width: 100%;
+  background-image: linear-gradient(to right, #289647, #47ca6c);
+  height: 15rem;
+  margin-bottom: 5rem;
+
+  display: grid;
+  grid-template-columns: max-content;
+}
+
+.search {
+  grid-column: 2 / span 1;
+  align-self: center;
+  justify-self: center;
+  &__input {
+    font-family: inherit;
+    font-size: 2rem;
+    border: none;
+    padding: 0.7rem 2rem;
+    width: 90%;
+    border-radius: 1.7rem;
+    transition: all 0.2s;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      transform: scale(1.1);
+      box-shadow: 0 1rem 2rem rgba(black, 0.4);
+    }
+  }
+}
+
+.title {
+  width: 100%;
+  background-image: linear-gradient(to right, #289647, #47ca6c);
   height: 7rem;
   margin-bottom: 5rem;
+}
+
+.heading__box {
+  grid-column: 1 / span 1;
+  font-size: 2rem;
+  width: 20rem;
+  color: white;
+  align-self: center;
+  margin-left: 2rem;
 }
