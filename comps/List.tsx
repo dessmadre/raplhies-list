@@ -9,7 +9,7 @@ const List = ({ filteredItems }) => {
         price={item.price}
         title={item.title}
         link={item.get_full_url}
-        imglink={item.get_img_permalink_large}
+        imglink={item.get_img_permalink_medium}
       />
     );
   });
