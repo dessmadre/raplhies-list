@@ -28,6 +28,7 @@ const Home = () => {
       <Head>
         <title>Ralphie's List</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta name='description' content={`Ralph's complete OfferUp catalog`} />
       </Head>
       <nav className={styles.nav}>
         <div className={styles.heading__box}>
