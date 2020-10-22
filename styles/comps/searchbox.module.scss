@@ -11,7 +11,7 @@
 .search {
   grid-column: 2 / span 1;
   align-self: center;
-  justify-self: center;
+  justify-self: stretch;
   &__input {
     font-family: inherit;
     font-size: 2rem;
