@@ -25,13 +25,13 @@ const Home = () => {
     setFilters({ ...filters, searchInput: e.target.value });
   };
 
-  const checkCuadro = catalog.filter(item => {
-    return item.title.toLowerCase().includes('cuadro');
-  });
+  // const checkCuadro = catalog.filter(item => {
+  //   return item.title.toLowerCase().includes('cuadro');
+  // });
 
-  const checkImagen = catalog.filter(item => {
-    return item.title.toLowerCase().includes('cuadro');
-  });
+  // const checkImagen = catalog.filter(item => {
+  //   return item.title.toLowerCase().includes('imagen');
+  // });
 
   const filteredItems = catalog.filter(item => {
     return item.title.toLowerCase().includes(searchInput.toLowerCase());
@@ -53,11 +53,7 @@ const Home = () => {
       </nav>
 
       <main>
-        <List
-          filteredItems={filteredItems}
-          checkImagen={checkImagen}
-          checkCuadro={checkCuadro}
-        />
+        <List filteredItems={filteredItems} />
       </main>
     </>
   );
