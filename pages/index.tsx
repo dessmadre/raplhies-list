@@ -4,20 +4,34 @@ import styles from '../styles/main.module.scss';
 import List from '../comps/List';
 import SearchBox from '../comps/SearchBox';
 import Head from 'next/head';
+import Checkbox from '../comps/Checkbox';
 
 const Home = () => {
   const [items, setItems] = useState({
     catalog: offerUp[0].data.items,
+  });
+
+  const [filters, setFilters] = useState({
     searchInput: '',
   });
 
-  const { catalog, searchInput } = items;
+  const { catalog } = items;
+
+  const { searchInput } = filters;
 
   const handleInput = e => {
     // console.log(e.target.value);
 
-    setItems({ ...items, searchInput: e.target.value });
+    setFilters({ ...filters, searchInput: e.target.value });
   };
+
+  const checkCuadro = catalog.filter(item => {
+    return item.title.toLowerCase().includes('cuadro');
+  });
+
+  const checkImagen = catalog.filter(item => {
+    return item.title.toLowerCase().includes('cuadro');
+  });
 
   const filteredItems = catalog.filter(item => {
     return item.title.toLowerCase().includes(searchInput.toLowerCase());
@@ -35,10 +49,15 @@ const Home = () => {
           <h1 className={styles.heading__1}>Ralphie's List</h1>
         </div>
         <SearchBox handleInput={handleInput} />
+        <Checkbox handleInput={handleInput} />
       </nav>
 
       <main>
-        <List filteredItems={filteredItems} />
+        <List
+          filteredItems={filteredItems}
+          checkImagen={checkImagen}
+          checkCuadro={checkCuadro}
+        />
       </main>
     </>
   );

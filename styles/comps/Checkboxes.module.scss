@@ -1,27 +1,14 @@
-.card {
-  height: 75rem;
-  border: 0.5px solid black;
-  max-width: 45rem;
-  border-radius: 2rem;
-  overflow: hidden;
-  margin-bottom: 5rem;
-  background-color: white;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  justify-self: center;
+.filter {
   align-self: center;
-
-  &__img {
-    height: 45rem;
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
+  justify-self: center;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
   &__btn {
+    align-self: center;
+    justify-self: center;
+    margin-top: 2rem;
     &,
     &:link,
     &:visited {
@@ -31,12 +18,12 @@
       display: inline-block;
       border-radius: 3rem;
       transition: all 0.2s;
-      width: 70%;
-      height: 7rem;
+      width: 40%;
+
       position: relative;
-      font-size: 3rem;
-      background-color: #289647;
-      color: white;
+      font-size: 1.5rem;
+      background-color: white;
+      color: #289647;
       font-weight: 600;
       text-align: center;
 
@@ -59,12 +46,5 @@
       transform: translateY(-1px);
       box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
     }
-  }
-
-  &__details {
-    width: 100%;
-    justify-self: flex-start;
-
-    padding-left: 6rem;
   }
 }

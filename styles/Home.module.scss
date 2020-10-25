@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(max-content, 50rem));
+  grid-template-columns: repeat(auto-fill, minmax(max-content, 45rem));
   justify-content: space-evenly;
 
   gap: 1rem;

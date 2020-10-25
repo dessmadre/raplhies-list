@@ -8,6 +8,7 @@ const SearchBox = props => {
         onChange={props.handleInput}
         type='text'
         placeholder='Search'
+        autoComplete='off'
       />
     </div>
   );
