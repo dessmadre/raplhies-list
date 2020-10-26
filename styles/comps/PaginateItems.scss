@@ -1,0 +1,9 @@
+.pagination {
+  display: grid;
+  margin-bottom: 3rem;
+  &__box {
+    justify-self: center;
+    align-self: center;
+    transform: scale(1.5);
+  }
+}

@@ -1,21 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { offerUp } from '../data/data';
 import styles from '../styles/main.module.scss';
 import List from '../comps/List';
 import SearchBox from '../comps/SearchBox';
 import Head from 'next/head';
 import Checkbox from '../comps/Checkbox';
+import PaginateItems from '../comps/PaginateItems';
+
+// catalog: offerUp[0].data.items,
 
 const Home = () => {
-  const [items, setItems] = useState({
-    catalog: offerUp[0].data.items,
-  });
-
+  const [items, setItems] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(20);
   const [filters, setFilters] = useState({
     searchInput: '',
   });
 
-  const { catalog } = items;
+  useEffect(() => {
+    setItems(offerUp[0].data.items);
+  }, []);
 
   const { searchInput } = filters;
 
@@ -25,17 +29,20 @@ const Home = () => {
     setFilters({ ...filters, searchInput: e.target.value });
   };
 
-  // const checkCuadro = catalog.filter(item => {
-  //   return item.title.toLowerCase().includes('cuadro');
-  // });
+  // Get current Posts
+  const IndexOfLastItem = currentPage * itemsPerPage;
+  const IndexOfFirstItem = IndexOfLastItem - itemsPerPage;
 
-  // const checkImagen = catalog.filter(item => {
-  //   return item.title.toLowerCase().includes('imagen');
-  // });
+  // Change Page
+  const paginate = pageNumber => setCurrentPage(pageNumber);
 
-  const filteredItems = catalog.filter(item => {
-    return item.title.toLowerCase().includes(searchInput.toLowerCase());
-  });
+  // Filter Items
+  const filterItems = items
+    .filter(item => {
+      return item.title.toLowerCase().includes(searchInput.toLowerCase());
+    })
+    .slice(IndexOfFirstItem, IndexOfLastItem);
+  console.log(filterItems.length);
 
   return (
     <>
@@ -53,7 +60,13 @@ const Home = () => {
       </nav>
 
       <main>
-        <List filteredItems={filteredItems} />
+        <List filteredItems={filterItems} />
+        <PaginateItems
+          itemsPerPage={itemsPerPage}
+          totalItems={items.length}
+          filteredItems={filterItems.length}
+          paginate={paginate}
+        />
       </main>
     </>
   );
