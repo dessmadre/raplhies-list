@@ -1,18 +1,12 @@
 import Pagination from 'react-bootstrap/Pagination';
 import styles from '../styles/main.module.scss';
 
-const PaginateItems = ({
-  itemsPerPage,
-  filteredItems,
-  totalItems,
-  paginate,
-}) => {
+const PaginateItems = ({ itemsPerPage, totalItems, paginate, filtered }) => {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(filtered / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
-  console.log(Math.ceil(Math.ceil(totalItems / filteredItems) / itemsPerPage));
 
   return (
     <nav className={styles.pagination}>

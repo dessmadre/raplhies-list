@@ -42,7 +42,11 @@ const Home = () => {
       return item.title.toLowerCase().includes(searchInput.toLowerCase());
     })
     .slice(IndexOfFirstItem, IndexOfLastItem);
-  console.log(filterItems.length);
+
+  const filtered = items.filter(item => {
+    return item.title.toLowerCase().includes(searchInput.toLowerCase());
+  }).length;
+  console.log(filtered);
 
   return (
     <>
@@ -64,8 +68,8 @@ const Home = () => {
         <PaginateItems
           itemsPerPage={itemsPerPage}
           totalItems={items.length}
-          filteredItems={filterItems.length}
           paginate={paginate}
+          filtered={filtered}
         />
       </main>
     </>
