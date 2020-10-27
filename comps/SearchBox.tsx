@@ -1,5 +1,9 @@
 import styles from '../styles/main.module.scss';
 
+const onSubmit = e => {
+  e.preventDefault();
+};
+
 const SearchBox = props => {
   return (
     <div className={styles.search}>
@@ -9,6 +13,7 @@ const SearchBox = props => {
         type='text'
         placeholder='Search Items...'
         autoComplete='off'
+        onSubmit={onSubmit}
       />
     </div>
   );
