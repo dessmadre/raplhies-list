@@ -45,6 +45,12 @@ const Home = () => {
     return item.title.toLowerCase().includes(searchInput.toLowerCase());
   }).length;
 
+  const filterItemsByDescription = items
+    .filter(item => {
+      return item.description.toLowerCase().includes(searchInput.toLowerCase());
+    })
+    .slice(IndexOfFirstItem, IndexOfLastItem);
+
   return (
     <>
       <Head>
@@ -61,7 +67,10 @@ const Home = () => {
       </nav>
 
       <main>
-        <List filteredItems={filterItems} />
+        <List
+          filteredItems={filterItems}
+          filterItemsByDescription={filterItemsByDescription}
+        />
         <PaginateItems
           itemsPerPage={itemsPerPage}
           totalItems={items.length}
