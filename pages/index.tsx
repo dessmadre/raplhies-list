@@ -7,8 +7,6 @@ import Head from 'next/head';
 import Checkbox from '../comps/Checkbox';
 import PaginateItems from '../comps/PaginateItems';
 
-// catalog: offerUp[0].data.items,
-
 const Home = () => {
   const [items, setItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -46,7 +44,6 @@ const Home = () => {
   const filtered = items.filter(item => {
     return item.title.toLowerCase().includes(searchInput.toLowerCase());
   }).length;
-  console.log(filtered);
 
   return (
     <>
