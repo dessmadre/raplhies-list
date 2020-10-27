@@ -2,6 +2,10 @@ $theme-colors: (
   'primary': #289647,
 );
 
+$pagination-active-color: white;
+$pagination-active-bg: #289647;
+$pagination-active-border-color: #289647;
+
 @import '../node_modules/bootstrap/scss/functions';
 @import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/mixins';

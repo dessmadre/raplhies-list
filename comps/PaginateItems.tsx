@@ -1,4 +1,5 @@
 import Pagination from 'react-bootstrap/Pagination';
+
 import styles from '../styles/main.module.scss';
 
 const PaginateItems = ({ itemsPerPage, totalItems, paginate, filtered }) => {

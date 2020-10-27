@@ -2,7 +2,7 @@ import styles from '../styles/main.module.scss';
 
 const SearchBox = props => {
   return (
-    <form className={styles.search}>
+    <div className={styles.search}>
       <input
         className={styles.search__input}
         onChange={props.handleInput}
@@ -10,7 +10,7 @@ const SearchBox = props => {
         placeholder='Search Items...'
         autoComplete='off'
       />
-    </form>
+    </div>
   );
 };
 
