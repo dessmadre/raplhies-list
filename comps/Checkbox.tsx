@@ -8,19 +8,19 @@ const Checkbox = props => {
           name='cuadro'
           className={styles.filter__btn}
           onClick={props.handleInput}
-          value='cuadro'
+          value='cuadro decorativo'
         >
           {' '}
-          Cuadros
+          Cuadros Decorativos
         </button>
         <button
           name='cuadro'
           className={styles.filter__btn}
           onClick={props.handleInput}
-          value='imagen'
+          value='cuadro religioso'
         >
           {' '}
-          Imagenes
+          Cuadros Religiosos
         </button>
       </div>
     </>
