@@ -1,30 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#Ralphie's List
 
-## Getting Started
+## Purpose
 
-First, run the development server:
+The purpose of this app was to create a catalog for vendors who use OfferUp as platform for selling thier goods. This app works by leveraging OfferUp's API which allows me access to all the products a seller has available. This app makes it easier for a seller to track thier inventory and can make it easier to show what they offer. The products can be filtered with the searchbar.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Challenges
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The most challenging part of this project was working with OfferUp's API, unfortuantely it is not public. In order to make the app display a sellers product, I have to to to a sellers page and get their product data from OfferUp everytime they updates thier merchandise. Nonetheless, I built the app and Ralphie's List is the catalog of my friend Ralph. Another challege was learing how to use filters and how I could filter the data on the page through the use of pagination and a searchbar,\n
