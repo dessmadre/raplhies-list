@@ -1,4 +1,4 @@
-#Ralphie's List
+# Ralphie's List
 
 ## Purpose
 
@@ -6,4 +6,4 @@ The purpose of this app was to create a catalog for vendors who use OfferUp as p
 
 ## Challenges
 
-The most challenging part of this project was working with OfferUp's API, unfortuantely it is not public. In order to make the app display a sellers product, I have to to to a sellers page and get their product data from OfferUp everytime they updates thier merchandise. Nonetheless, I built the app and Ralphie's List is the catalog of my friend Ralph. Another challege was learing how to use filters and how I could filter the data on the page through the use of pagination and a searchbar,\n
+The most challenging part of this project was working with OfferUp's API, unfortuantely it is not public. In order to make the app display a sellers product, I have to to to a sellers page and get their product data from OfferUp everytime they updates thier merchandise. Nonetheless, I built the app and Ralphie's List is the catalog of my friend Ralph. Another challege was learing how to use filters the data to show only a certain amount of products per page.
